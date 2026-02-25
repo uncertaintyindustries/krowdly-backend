@@ -17,8 +17,8 @@ const app = express();
 
 // ─── Supabase (service role — bypasses RLS, full DB access) ───
 const supabase = createClient(
-  process.env.SUPABASE_URL,
-  process.env.SUPABASE_SERVICE_KEY
+  process.env.https://rvysiglrggezxfxaxmgq.supabase.co,
+  process.env.eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InJ2eXNpZ2xyZ2dlenhmeGF4bWdxIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzE4NTI5MTAsImV4cCI6MjA4NzQyODkxMH0.QuvbHswjV-Az7JqDzWL2uxhDtCUu_bAz3HVPbO92FSQ
 );
 
 // CORS — wide open so any frontend (Vercel, local, file://) can call this API.
