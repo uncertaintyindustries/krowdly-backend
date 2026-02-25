@@ -22,7 +22,7 @@ const supabase = createClient(
   process.env.eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InJ2eXNpZ2xyZ2dlenhmeGF4bWdxIiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTc3MTg1MjkxMCwiZXhwIjoyMDg3NDI4OTEwfQ.3D7Wq72nMWc-vzcVZ_19KRewp6mAhnsMKJ7N7hwTre4
 );
 
-app.use(cors({ origin: process.env.FRONTEND_URL || '*' }));
+app.use(cors({ origin: process.env.https://krowdly.vercel.app || '*' }));
 app.use(express.json({ limit: '10mb' })); // 10 MB covers base64 event cover images
 
 // ─────────────────────────────────────────
