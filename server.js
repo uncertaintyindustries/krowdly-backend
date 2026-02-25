@@ -18,8 +18,8 @@ const app = express();
 
 // ─── Supabase (service role — bypasses RLS, full DB access) ───
 const supabase = createClient(
-  process.env.SUPABASE_URL,
-  process.env.SUPABASE_SERVICE_KEY
+  process.env.https://rvysiglrggezxfxaxmgq.supabase.co,
+  process.env.eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InJ2eXNpZ2xyZ2dlenhmeGF4bWdxIiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTc3MTg1MjkxMCwiZXhwIjoyMDg3NDI4OTEwfQ.3D7Wq72nMWc-vzcVZ_19KRewp6mAhnsMKJ7N7hwTre4
 );
 
 // CORS — allow your frontend domain AND localhost for local dev.
@@ -29,7 +29,7 @@ const corsOptions = {
   origin: function(origin, callback){
     // Allow requests with no origin (mobile apps, curl, Postman)
     if(!origin) return callback(null, true);
-    const allowed = (process.env.FRONTEND_URL || '*');
+    const allowed = (process.env.https://krowdly.vercel.app || '*');
     if(allowed === '*' || origin === allowed) return callback(null, true);
     // Also always allow localhost on any port for local dev
     if(/^https?:\/\/(localhost|127\.0\.0\.1)(:\d+)?$/.test(origin)) return callback(null, true);
